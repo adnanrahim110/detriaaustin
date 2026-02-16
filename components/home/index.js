@@ -1,0 +1,8 @@
+export { default as BioTeaser } from "./BioTeaser"
+export { default as BookTeaser } from "./BookTeaser"
+export { default as CTA } from "./CTA"
+export { default as ContactSection } from "./ContactSection"
+export { default as Hero } from "./Hero"
+export { default as Newsletter } from "./Newsletter"
+export { default as Speakings } from "./Speakings"
+export { default as Testimonials } from "./Testimonials"
