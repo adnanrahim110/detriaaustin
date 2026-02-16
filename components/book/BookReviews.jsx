@@ -74,10 +74,6 @@ const BookReviews = () => {
                   <p className="mt-5 text-sm leading-relaxed text-neutral-700">
                     {testimonial.quote}
                   </p>
-
-                  <div className="pointer-events-none absolute bottom-5 right-6 text-5xl font-black text-neutral-300">
-                    &rdquo;
-                  </div>
                 </div>
               ))}
             </div>
