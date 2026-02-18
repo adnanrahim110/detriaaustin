@@ -23,7 +23,6 @@ export default function Home() {
       <BookTeaser />
       <Testimonials />
       <Speakings />
-      <CTA />
       <Newsletter />
       <ContactSection />
     </>

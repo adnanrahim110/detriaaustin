@@ -1,4 +1,5 @@
 import { BookHero } from "@/components/book"
+import { ContactSection } from "@/components/home"
 import { SpeakingCTA, SpeakingFormats, SpeakingTopics } from "@/components/speakings"
 
 export const metadata = {
@@ -27,6 +28,7 @@ const SpeakingsPage = () => {
       <SpeakingTopics />
       <SpeakingFormats />
       <SpeakingCTA />
+      <ContactSection />
     </>
   )
 }

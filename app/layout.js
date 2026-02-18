@@ -1,6 +1,8 @@
 import Appshell from "@/components/layouts/Appshell";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "swiper/css";
+import "swiper/css/effect-fade";
 
 export const metadata = {
   title: "",

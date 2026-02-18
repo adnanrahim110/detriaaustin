@@ -2,6 +2,7 @@
 
 import { nav_links, social_links } from "@/constants";
 import { Leaf } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import Button from "../ui/Button";
 
@@ -21,54 +22,34 @@ const Footer = () => {
       <div className="container pt-6 pb-5">
         <div className="relative overflow-hidden rounded-3xl bg-neutral-950 text-white">
           <div
-            className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,86,159,0.35),transparent_55%)]"
+            className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,86,159,0.35),transparent_55%)]"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-0 opacity-30 [background-image:linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:56px_56px]"
+            className="absolute inset-0 opacity-30 bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-size-[56px_56px]"
             aria-hidden="true"
           />
 
           <div className="relative px-6 py-10 sm:px-10 lg:px-14 lg:py-12">
-            <div className="grid gap-10 lg:grid-cols-[1.05fr_1fr_0.95fr]">
-              <div className="space-y-5">
+            <div className="grid gap-10 lg:grid-cols-[0.9fr_1fr_0.9fr]">
+              <div>
                 <Link
                   href="/"
                   className="inline-flex items-center gap-3 text-white"
                 >
-                  <span
-                    className="flex h-11 w-11 items-center justify-center rounded-full bg-primary-700/25 text-primary-100"
-                    aria-hidden="true"
-                  >
-                    <Leaf className="h-5 w-5" />
-                  </span>
-                  <span className="text-xl font-semibold tracking-[0.2em]">
-                    DETRIA
-                  </span>
+                  <Image
+                    width={500}
+                    height={500}
+                    src="/imgs/logo-w.png"
+                    alt="Logo- Detria Austin"
+                    className="w-68 h-auto"
+                  />
                 </Link>
 
-                <p className="max-w-sm text-sm leading-relaxed text-white/70">
+                <p className="max-w-xs text-sm leading-relaxed text-white/70">
                   Transforming lives through service, leadership, and collective
                   action.
                 </p>
-
-                <div className="flex flex-wrap items-center gap-4">
-                  <Button
-                    href={contactHref || "/contact"}
-                    size="sm"
-                    className="rounded-full"
-                  >
-                    Book Detria
-                  </Button>
-                  {speakingsHref && (
-                    <Link
-                      href={speakingsHref}
-                      className="text-sm font-semibold text-white/75 transition hover:text-white"
-                    >
-                      View speaking topics
-                    </Link>
-                  )}
-                </div>
               </div>
 
               <div className="grid gap-8 sm:grid-cols-2">

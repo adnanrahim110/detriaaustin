@@ -44,29 +44,30 @@ export default function Hero() {
         </div>
 
         <div className="relative mt-10 text-center">
-          <h1 className="text-4xl font-semibold tracking-[-0.03em] md:text-[150px]">
-            Writing that Speaks,
+          <h1 className="text-4xl font-semibold tracking-[-0.03em] md:text-[70px] relative z-1">
+            Service is not soft.&nbsp;&nbsp;&nbsp;It is strength with humility
             <br />
-            Stories&nbsp;&nbsp;&nbsp;&nbsp;that Last.
+            quiet power that&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;changes what
+            comes next
           </h1>
 
           <div className="pointer-events-none absolute left-[43%] top-[64%] w-55 -translate-x-1/2 -translate-y-1/2 md:top-[56%]">
-            <div className="absolute left-29 -top-10 rotate-10">
+            <div className="absolute left-28 -top-16 rotate-10">
               <div className="relative h-38 w-28">
                 <Image
-                  src="/book-tan.png"
+                  src="/imgs/book-back.png"
                   alt=""
                   fill
-                  className="object-contain"
+                  className="object-contain z-0"
                   priority
                 />
               </div>
             </div>
 
-            <div className="absolute left-10 top-3.5 -rotate-10">
+            <div className="absolute left-4.5 -top-4 -rotate-10">
               <div className="relative h-38 w-28">
                 <Image
-                  src="/book-brown.png"
+                  src="/imgs/book.png"
                   alt=""
                   fill
                   className="object-contain"
@@ -80,8 +81,9 @@ export default function Hero() {
         <div className="mt-28 grid gap-6 md:grid-cols-12 items-end">
           <div className="md:col-span-5">
             <div className="relative rounded-xl bg-stone-200 px-8 py-7">
-              <div className="max-w-105 text-[40px] font-semibold leading-[1.1] text-neutral-900">
-                Good Writing Is Clear Thinking Made Visible.
+              <div className="text-[33px] font-semibold leading-[1.1] text-neutral-900">
+                A book for people who want their leadership to feel like care,
+                not performance.
               </div>
               <div className="mt-4 text-2xl font-medium text-neutral-700">
                 – E.L. Doctorow

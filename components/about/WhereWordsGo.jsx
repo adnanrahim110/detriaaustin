@@ -52,8 +52,8 @@ const WhereWordsGo = () => {
   return (
     <section className="bg-[#F3F2EF] pt-16 pb-20 lg:pt-24 lg:pb-28 overflow-hidden">
       <div className="container">
-        <h2 className="text-center text-[clamp(3rem,9vw,10rem)] font-semibold leading-[0.95] tracking-[-0.03em]">
-          Where the Words Go.
+        <h2 className="text-center text-[clamp(3rem,7vw,6rem)] font-semibold leading-[0.95] tracking-[-0.03em]">
+          Where Service Becomes Strength
         </h2>
 
         <div className="hidden lg:block relative">
@@ -66,10 +66,10 @@ const WhereWordsGo = () => {
 
             <div className="text-center max-w-3xl mx-auto pb-6">
               <p className="leading-relaxed text-lg text-neutral-500">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Assumenda pariatur quo dolore odit iure. Labore inventore quidem
-                fugit numquam facilis, aspernatur optio! Voluptatum, eveniet
-                sint mollitia amet cum libero tenetur?
+                Detria has written this book, which blends real stories with
+                practical lessons, so service is not just a value, but a daily
+                way of leading that people can feel in teams, families, and
+                communities.
               </p>
             </div>
 

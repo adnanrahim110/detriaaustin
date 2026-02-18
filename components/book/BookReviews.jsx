@@ -1,25 +1,13 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
+"use client";
 
-const testimonials = [
-  {
-    name: "Maya Elston",
-    role: "Community Leader",
-    quote:
-      "Detria brings clarity and conviction. The message is grounded, practical, and deeply inspiring.",
-    avatar:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=120&q=80",
-  },
-  {
-    name: "Talia Ridge",
-    role: "Nonprofit Founder",
-    quote:
-      "Professional, intuitive, and easy to work with. The process feels seamless from start to finish.",
-    avatar:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80",
-  },
-];
+import { useRef } from "react";
+import { reviews } from "@/constants";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const BookReviews = () => {
+  const swiperRef = useRef(null);
+
   return (
     <section className="bg-white">
       <div className="container py-16 lg:py-24">
@@ -33,7 +21,7 @@ const BookReviews = () => {
             />
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-8 min-w-0">
             <div className="grid gap-6 lg:items-start">
               <div className="space-y-4">
                 <h2 className="text-3xl font-semibold leading-tight text-neutral-900 sm:text-4xl">
@@ -48,40 +36,50 @@ const BookReviews = () => {
               </div>
             </div>
 
-            <div className="grid gap-6 lg:grid-cols-2">
-              {testimonials.map((testimonial) => (
-                <div
-                  key={testimonial.name}
-                  className="relative rounded-3xl border border-neutral-200 bg-neutral-50 p-6 shadow-sm"
-                >
-                  <div className="flex items-center gap-3">
-                    <img
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      className="h-11 w-11 rounded-full object-cover"
-                      loading="lazy"
-                    />
-                    <div>
-                      <p className="text-sm font-semibold text-neutral-900">
-                        {testimonial.name}
-                      </p>
-                      <p className="text-xs text-neutral-500">
-                        {testimonial.role}
-                      </p>
+            <Swiper
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              slidesPerView={1}
+              spaceBetween={24}
+              loop={reviews.length > 2}
+              breakpoints={{
+                1024: {
+                  slidesPerView: 2,
+                },
+              }}
+              className="w-full min-w-0"
+            >
+              {reviews.map((testimonial) => (
+                <SwiperSlide key={testimonial.name} className="h-auto">
+                  <div className="relative rounded-3xl border border-neutral-200 bg-neutral-50 p-6 shadow-sm">
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        className="h-11 w-11 rounded-full object-cover"
+                        loading="lazy"
+                      />
+                      <div>
+                        <p className="text-sm font-semibold text-neutral-900">
+                          {testimonial.name}
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <p className="mt-5 text-sm leading-relaxed text-neutral-700">
-                    {testimonial.quote}
-                  </p>
-                </div>
+                    <p className="mt-5 text-sm leading-relaxed text-neutral-700">
+                      {testimonial.text}
+                    </p>
+                  </div>
+                </SwiperSlide>
               ))}
-            </div>
+            </Swiper>
 
             <div className="flex justify-end gap-3">
               <button
                 type="button"
                 aria-label="Previous"
+                onClick={() => swiperRef.current?.slidePrev()}
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900"
               >
                 <ChevronLeft className="h-5 w-5" />
@@ -89,6 +87,7 @@ const BookReviews = () => {
               <button
                 type="button"
                 aria-label="Next"
+                onClick={() => swiperRef.current?.slideNext()}
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900"
               >
                 <ChevronRight className="h-5 w-5" />

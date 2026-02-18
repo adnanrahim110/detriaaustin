@@ -23,13 +23,12 @@ const Newsletter = () => {
 
           <div className="relative grid gap-10 px-6 py-12 sm:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:px-14 lg:py-14">
             <div className="space-y-5 text-white">
-              <div className="text-sm font-semibold text-primary-200">(05)</div>
               <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl">
-                Book Launch Sign-Up
+                Launch Updates
               </h2>
               <p className="max-w-xl text-sm leading-relaxed text-white/75 sm:text-base">
-                Serving Is a Superpower is coming soon. Join the list for launch
-                announcements, event invitations, and speaking updates.
+                Be the first to know when Serving Is a Superpower is available.
+                No spam. Just the news that matters, when it matters.
               </p>
 
               <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
@@ -76,7 +75,7 @@ const Newsletter = () => {
                   size="sm"
                   className="w-full justify-between gap-3 rounded-full bg-white px-6 py-3 text-sm text-primary-800 shadow-lg before:bg-white/80 hover:text-primary-950"
                 >
-                  Join the list
+                  Keep Me Updated
                 </Button>
                 <p className="mt-3 text-xs leading-relaxed text-white/60">
                   No spam. Unsubscribe anytime.

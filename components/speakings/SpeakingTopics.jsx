@@ -6,39 +6,39 @@ const speakingTopics = [
   {
     title: "Serving Is a Superpower",
     description:
-      "Lessons on how service transforms communities—and the people who serve.",
+      "Stories and lessons on how service becomes real strength—steady, practical, and lasting.",
     image:
       "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=640&q=80",
     alt: "Speaker addressing an audience",
   },
   {
-    title: "Leadership Training & Strategy",
+    title: "Lead With Clarity",
     description:
-      "Practical frameworks for leading with clarity, building alignment, and executing with purpose.",
+      "Simple frameworks for making better decisions, building trust, and keeping teams aligned.",
     image:
       "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=640&q=80",
     alt: "Team collaborating around a table",
   },
   {
-    title: "Community Service & Collective Action",
+    title: "Service That Builds Community",
     description:
-      "How direct service, partnerships, and shared responsibility create lasting change.",
+      "How consistent action, shared responsibility, and partnerships create change that holds.",
     image:
       "https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=640&q=80",
     alt: "People working together in a community setting",
   },
   {
-    title: "Housing & Financial Literacy Advocacy",
+    title: "Stability, Opportunity, and Voice",
     description:
-      "Community-centered conversations on stability, opportunity, and empowerment.",
+      "A grounded focus on housing and financial literacy as pathways to dignity and upward movement.",
     image:
       "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=640&q=80",
     alt: "Hands exchanging house keys",
   },
   {
-    title: "Mentoring Tomorrow’s Leaders",
+    title: "Raising the Next Leaders",
     description:
-      "Encouragement and tools for emerging leaders to grow, serve, and lead with confidence.",
+      "Support and tools for emerging leaders to grow confidence, serve well, and lead with integrity.",
     image:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80",
     alt: "Mentor speaking with a young professional",
@@ -116,4 +116,3 @@ const SpeakingTopics = () => {
 };
 
 export default SpeakingTopics;
-

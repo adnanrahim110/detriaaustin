@@ -1,19 +1,23 @@
 "use client";
 
+import Image from "next/image";
 import Button from "../ui/Button";
 
 const highlights = [
   {
-    title: "240+ Pages",
-    description: "A tightly crafted novel with vivid, cinematic pacing.",
+    title: "Short, Practical Chapters",
+    description:
+      "Clear reflections and real examples that fit into a busy life—written to be applied immediately, not saved for later.",
   },
   {
-    title: "Award Shortlist",
-    description: "Recognized for voice, clarity, and emotional depth.",
+    title: "Leadership With Heart",
+    description:
+      "A grounded approach to servant leadership that builds trust, restores dignity, and strengthens teams and communities.",
   },
   {
-    title: "4.9 Reader Score",
-    description: "Praised for clarity, tenderness, and rich storytelling.",
+    title: "Stories That Stay With You",
+    description:
+      "“Service Witnessed” moments that highlight what service looks like in real life—and why small actions carry long-term weight.",
   },
 ];
 
@@ -33,33 +37,22 @@ const BookTeaser = () => {
             />
             <div className="relative mx-auto max-w-md">
               <div className="absolute -left-6 top-10 hidden h-95 w-62.5 -rotate-6 rounded-[28px] border border-neutral-200 bg-white shadow-xl sm:block" />
-              <div className="relative h-105 w-70 rounded-4xl bg-linear-to-br from-primary-950 via-primary-800 to-primary-600 p-0.5 shadow-2xl">
-                <div className="flex h-full flex-col justify-between rounded-[30px] bg-primary-900/90 p-8 text-white">
-                  <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-white/60">
-                    <span>New Release</span>
-                    <span>2026</span>
-                  </div>
-                  <div className="mt-10 space-y-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-white/60">
-                      A Novel
-                    </p>
-                    <h3 className="text-3xl font-semibold">
-                      Notes From the Middle
-                    </h3>
-                    <p className="text-sm leading-relaxed text-white/70">
-                      A luminous exploration of place, memory, and the stories
-                      we keep.
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-between text-xs text-white/60">
-                    <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-white/80">
-                      Hardcover Edition
-                    </span>
-                    <span>ISBN 0-1234</span>
-                  </div>
-                </div>
+              <div className="relative w-70 shadow-2xl">
+                <Image
+                  width={720}
+                  height={500}
+                  src="/imgs/book.png"
+                  alt="Book"
+                  className="h-auto w-full"
+                />
               </div>
-              <div className="absolute -bottom-10 -right-6 hidden h-80 w-52.5 rotate-[7deg] rounded-[26px] bg-primary-100/70 shadow-lg lg:block" />
+              <Image
+                width={720}
+                height={500}
+                src="/imgs/book-back.png"
+                alt="Book"
+                className="absolute -bottom-10 -right-6 hidden w-52.5 rotate-[7deg] shadow-lg lg:block"
+              />
             </div>
           </div>
 
@@ -68,12 +61,13 @@ const BookTeaser = () => {
               Featured Book
             </span>
             <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl">
-              A story-driven book for readers who crave depth and clarity.
+              A Story-Driven Guide For Leaders Who Want Impact That Lasts.
             </h2>
             <p className="max-w-xl text-base leading-relaxed text-neutral-600">
-              Discover a layered narrative about resilience, belonging, and the
-              beauty of small moments. Written with precision and warmth, this
-              book balances poetic cadence with unforgettable characters.
+              Serving Is a Superpower shows how service becomes real
+              strength—steady, practical, and rooted in purpose. Built on lived
+              experience and clear lessons, it turns good intentions into action
+              that people actually feel.
             </p>
 
             <div className="grid gap-4 sm:grid-cols-2">
@@ -93,9 +87,9 @@ const BookTeaser = () => {
             </div>
 
             <div className="flex flex-wrap items-center gap-4">
-              <Button href="/book">Read The Excerpt</Button>
-              <Button href="/contact" variant="outline">
-                Request A Copy
+              <Button href="/">Buy Now</Button>
+              <Button href="/book" variant="outline">
+                Read More
               </Button>
             </div>
           </div>

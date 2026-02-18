@@ -2,14 +2,8 @@ import Link from "next/link";
 
 const BookHero = ({
   badge = "Book Detail",
-  title = (
-    <>
-      Serving Is a
-      <br />
-      Superpower.
-    </>
-  ),
-  description = "A deeper look into the purpose behind service—and the power of giving and receiving.",
+  title = <>Service isn’t something you do. It’s something you become.</>,
+  description = "Serving is a SuperPower, will change how you see yourself, your neighbors, and the power you already carry.",
   breadcrumbLabel = "Book Detail",
   imageSrc = "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1600&q=80",
   imageAlt = "Stacks of books",
@@ -23,7 +17,7 @@ const BookHero = ({
               {badge}
             </span>
 
-            <h1 className="text-4xl font-semibold tracking-[-0.03em] text-neutral-900 sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-semibold tracking-[-0.03em] text-neutral-900 sm:text-5xl lg:text-[56px]">
               {title}
             </h1>
           </div>

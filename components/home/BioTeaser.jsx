@@ -22,17 +22,16 @@ const BioTeaser = () => {
               Author&apos;s Journey
             </div>
             <h2 className="text-3xl font-semibold leading-tight text-neutral-900 sm:text-4xl">
-              A Quiet Path
-              <br />
-              Through Pages.
+              Get To Know Detria Austin
             </h2>
-            <p className="max-w-xl text-sm leading-relaxed text-neutral-600 sm:text-base">
-              The work did not start with a title or a plan, just a growing need
-              to make sense of things through language. One sentence led to
-              another, first in notebooks, then on blank screens, until the
-              habit became craft. Along the way, there were essays that
-              unraveled, drafts that stayed unfinished, and stories that somehow
-              found their way home.
+            <p className="max-w-xl text-sm leading-relaxed text-neutral-600 sm:text-lg">
+              Detria Austin Everson is a nationally recognised servant leader
+              and business strategist whose work sits at the intersection of
+              leadership, organizational excellence, and social impact. With 20+
+              years across nonprofit, corporate, healthcare, and financial
+              sectors, she is known for building sustainable institutions,
+              stewarding resources with integrity, and helping mission-driven
+              work produce lasting results.
             </p>
           </div>
 
@@ -46,10 +45,10 @@ const BioTeaser = () => {
               />
             </div>
             <Link
-              href="/book"
+              href="/about"
               className="inline-flex items-center gap-2 border-b border-neutral-300 pb-1 text-sm font-semibold text-neutral-700 transition hover:border-primary-700 hover:text-primary-700"
             >
-              View My Works
+              Know More
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

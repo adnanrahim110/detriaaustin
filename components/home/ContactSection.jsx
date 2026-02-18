@@ -20,11 +20,11 @@ const ContactSection = () => {
           <div className="relative grid gap-10 lg:grid-cols-[1fr_1.05fr] lg:items-start">
             <div className="space-y-6">
               <h2 className="text-3xl font-semibold leading-tight text-neutral-900 sm:text-4xl">
-                Let&apos;s start a conversation.
+                Ready To Talk?
               </h2>
               <p className="max-w-xl text-sm leading-relaxed text-neutral-600 sm:text-base">
-                Share a few details about your project and I&apos;ll respond
-                with next steps, timelines, and the best way we can collaborate.
+                Questions, review requests, press, or collaborations, share the
+                details and a response will follow shortly.
               </p>
 
               <div className="grid gap-4 ">
