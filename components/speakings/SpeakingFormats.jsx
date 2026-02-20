@@ -37,25 +37,26 @@ const SpeakingFormats = () => {
           <div className="space-y-6">
             <div className="text-sm font-semibold text-primary-700">(02)</div>
             <h2 className="text-3xl font-semibold leading-tight text-neutral-900 sm:text-4xl">
-              Ways to work together
+              Workshops That Build Skills,
               <br />
-              for your audience.
+              Not Just Inspiration
             </h2>
             <p className="max-w-xl text-sm leading-relaxed text-neutral-600 sm:text-base">
-              Whether you’re planning a keynote, workshop, or panel, each
-              session is designed to meet your moment—grounded, practical, and
-              tailored to your goals.
+              Workshops expand the message of the book into practical, guided
+              learning. Sessions can be customized for leadership teams, staff
+              groups, youth, or community leaders.
             </p>
 
             <div className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm">
               <p className="text-sm font-semibold text-neutral-900">
-                What’s included
+                Popular Workshop Themes
               </p>
-              <ul className="mt-4 space-y-3 text-sm leading-relaxed text-neutral-600 sm:text-base">
+              <ul className="mt-4 space-y-1 text-sm leading-relaxed text-neutral-600 sm:text-base">
                 {[
-                  "Pre-event alignment to understand your audience and outcomes.",
-                  "A tailored outline with themes, pacing, and key takeaways.",
-                  "Optional Q&A prompts and post-session discussion points.",
+                  "Building a service-centered culture",
+                  "Communication that earns trust",
+                  "Leading through change without losing people",
+                  "Creating sustainable community impact",
                 ].map((item) => (
                   <li key={item} className="flex gap-3">
                     <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-primary-700" />
@@ -106,4 +107,3 @@ const SpeakingFormats = () => {
 };
 
 export default SpeakingFormats;
-

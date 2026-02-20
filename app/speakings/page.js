@@ -15,12 +15,12 @@ const SpeakingsPage = () => {
         badge="Speakings"
         title={
           <>
-            Keynotes &
+            Motivational Talks Rooted in
             <br />
-            Workshops.
+            Service, Purpose, and Real Leadership
           </>
         }
-        description="Invite Detria Austin Everson for practical, service-centered sessions that inspire leaders and strengthen communities."
+        description="Detria Austin Everson brings the message of Serving Is a Superpower to organizations, schools, and communities through motivational keynotes and practical workshops that help people lead with integrity, serve consistently, and create lasting impact."
         breadcrumbLabel="Speakings"
         imageSrc="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1600&q=80"
         imageAlt="Speaker addressing an audience"
