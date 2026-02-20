@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Button from "../ui/Button";
+import { Reveal } from "../ui/Reveal";
 
 const categories = [
   "Servant Leadership",
@@ -12,15 +13,15 @@ const categories = [
 ];
 
 const overviewQuote =
-  "“The smallest act done with great love becomes greater than the loudest deed done for attention.”";
+  "\u201CThe smallest act done with great love becomes greater than the loudest deed done for attention.\u201D";
 
 const overviewTagline =
   "A story-led guide to service as quiet strength, practical, steady, and built for real life.";
 
 const BookDetails = () => {
   return (
-    <section className="bg-white">
-      <div className="container py-16 lg:py-20">
+    <section className="bg-white section-padding">
+      <div className="container">
         <div className="relative">
           <div
             className="pointer-events-none absolute -left-24 -top-20 h-64 w-64 rounded-full bg-primary-100/70 blur-3xl"
@@ -32,8 +33,12 @@ const BookDetails = () => {
           />
 
           <div className="relative grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-            <div className="min-w-0 space-y-6 lg:sticky top-5">
-              <div className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-neutral-50 p-8 shadow-sm">
+            <Reveal
+              variant="fade-right"
+              duration={0.8}
+              className="min-w-0 space-y-6 lg:sticky top-5"
+            >
+              <div className="relative overflow-hidden rounded-3xl border border-neutral-200/60 bg-white/70 backdrop-blur-xs p-8 shadow-[0_10px_30px_rgba(0,0,0,0.03)] ring-1 ring-neutral-200/50">
                 <div
                   className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-primary-100/70 blur-3xl"
                   aria-hidden="true"
@@ -62,31 +67,37 @@ const BookDetails = () => {
               >
                 Purchase Now on Amazon
               </Button>
-            </div>
+            </Reveal>
 
             <div className="min-w-0 space-y-6">
-              <div className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">
-                  Book Categories
-                </p>
+              <Reveal
+                variant="fade-left"
+                duration={0.8}
+                delay={0.1}
+                className="rounded-3xl border border-neutral-200/60 bg-white/70 backdrop-blur-xs p-6 shadow-[0_10px_30px_rgba(0,0,0,0.03)] ring-1 ring-neutral-200/50 sm:p-8"
+              >
+                <p className="section-label">Book Categories</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {categories.map((category) => (
                     <span
                       key={category}
-                      className="rounded-full border border-neutral-200 bg-neutral-50 px-4 py-2 text-xs font-semibold text-neutral-700 transition hover:border-neutral-300 hover:bg-white"
+                      className="rounded-full border border-neutral-200/60 bg-white/70 backdrop-blur-xs px-4 py-2 text-xs font-semibold text-neutral-700 transition hover:bg-white hover:shadow-sm"
                     >
                       {category}
                     </span>
                   ))}
                 </div>
-              </div>
+              </Reveal>
 
-              <div className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">
-                  Overview
-                </p>
+              <Reveal
+                variant="fade-left"
+                duration={0.8}
+                delay={0.2}
+                className="rounded-3xl border border-neutral-200/60 bg-white/70 backdrop-blur-xs p-6 shadow-[0_10px_30px_rgba(0,0,0,0.03)] ring-1 ring-neutral-200/50 sm:p-8"
+              >
+                <p className="section-label">Overview</p>
                 <div className="mt-5 space-y-4">
-                  <div className="relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-50 p-5">
+                  <div className="relative overflow-hidden rounded-2xl border border-neutral-200/60 bg-[#F3F2EF]/50 p-5">
                     <div
                       className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary-100/70 blur-3xl"
                       aria-hidden="true"
@@ -94,7 +105,7 @@ const BookDetails = () => {
                     <p className="relative text-lg font-semibold leading-snug text-neutral-900 sm:text-2xl">
                       {overviewQuote}
                     </p>
-                    <p className="relative mt-4 text-sm leading-relaxed text-neutral-600 sm:text-base">
+                    <p className="relative mt-4 section-body">
                       {overviewTagline}
                     </p>
                   </div>
@@ -103,7 +114,7 @@ const BookDetails = () => {
                     Transforming lives through service is the power of giving
                     and receiving.
                   </p>
-                  <p className="text-sm leading-relaxed text-neutral-600 sm:text-base">
+                  <p className="section-body">
                     Service is often treated like an extra. This book treats it
                     like a foundation. Serving Is a Superpower explores what
                     changes when service is practiced with consistency, how
@@ -114,13 +125,18 @@ const BookDetails = () => {
                     it easier to lead with purpose in everyday decisions.
                   </p>
                 </div>
-              </div>
+              </Reveal>
 
-              <div className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-8">
+              <Reveal
+                variant="fade-left"
+                duration={0.8}
+                delay={0.3}
+                className="rounded-3xl border border-neutral-200/60 bg-white/70 backdrop-blur-xs p-6 shadow-[0_10px_30px_rgba(0,0,0,0.03)] ring-1 ring-neutral-200/50 sm:p-8"
+              >
                 <p className="text-xl font-semibold uppercase text-black">
-                  What’s In The Book For You?
+                  What&apos;s In The Book For You?
                 </p>
-                <ul className="mt-5 space-y-4 text-sm leading-relaxed text-neutral-600 sm:text-base">
+                <ul className="mt-5 space-y-4 section-body">
                   <li className="flex gap-3">
                     <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-primary-700 ring-4 ring-primary-50" />
                     <span>
@@ -138,12 +154,12 @@ const BookDetails = () => {
                   <li className="flex gap-3">
                     <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-primary-700 ring-4 ring-primary-50" />
                     <span>
-                      “Service Witnessed” reflections that highlight the ripple
-                      effect of small actions done well.
+                      &ldquo;Service Witnessed&rdquo; reflections that highlight
+                      the ripple effect of small actions done well.
                     </span>
                   </li>
                 </ul>
-              </div>
+              </Reveal>
             </div>
           </div>
         </div>

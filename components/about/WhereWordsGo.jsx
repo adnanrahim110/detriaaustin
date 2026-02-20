@@ -2,6 +2,7 @@
 
 import { GoArrowRight } from "react-icons/go";
 import Button from "../ui/Button";
+import { Reveal } from "../ui/Reveal";
 
 const categories = [
   {
@@ -35,8 +36,15 @@ const categories = [
 ];
 
 const CategoryCard = ({ title, img, className = "", imgClassName = "" }) => (
-  <div className={`text-center ${className}`}>
-    <div className={`overflow-hidden rounded-2xl shadow-sm ${imgClassName}`}>
+  <Reveal
+    variant="fade-up"
+    duration={0.8}
+    as="div"
+    className={`text-center ${className}`}
+  >
+    <div
+      className={`overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.06)] ring-1 ring-neutral-200/50 ${imgClassName}`}
+    >
       <img
         src={img}
         alt={title}
@@ -45,16 +53,26 @@ const CategoryCard = ({ title, img, className = "", imgClassName = "" }) => (
       />
     </div>
     <p className="mt-3 text-base font-semibold text-neutral-800">{title}</p>
-  </div>
+  </Reveal>
 );
 
 const WhereWordsGo = () => {
   return (
-    <section className="bg-[#F3F2EF] pt-16 pb-20 lg:pt-24 lg:pb-28 overflow-hidden">
+    <section className="relative bg-[#F3F2EF] section-padding overflow-hidden">
+      <div
+        className="absolute right-0 top-[20%] h-100 w-125 rounded-full bg-primary-50/60 blur-[120px] pointer-events-none"
+        aria-hidden="true"
+      />
+
       <div className="container">
-        <h2 className="text-center text-[clamp(3rem,7vw,6rem)] font-semibold leading-[0.95] tracking-[-0.03em]">
+        <Reveal
+          as="h2"
+          variant="fade-up"
+          duration={0.8}
+          className="text-center text-[clamp(3rem,7vw,6rem)] font-semibold leading-[0.95] tracking-[-0.03em]"
+        >
           Where Service Becomes Strength
-        </h2>
+        </Reveal>
 
         <div className="hidden lg:block relative">
           <div className="flex items-start justify-between mt-8 relative z-10 px-6">
@@ -64,14 +82,18 @@ const WhereWordsGo = () => {
               imgClassName="w-40 h-48"
             />
 
-            <div className="text-center max-w-3xl mx-auto pb-6">
-              <p className="leading-relaxed text-lg text-neutral-500">
+            <Reveal
+              variant="fade-up"
+              delay={0.3}
+              className="text-center max-w-3xl mx-auto pb-6"
+            >
+              <p className="leading-relaxed text-lg section-body">
                 Detria has written this book, which blends real stories with
                 practical lessons, so service is not just a value, but a daily
                 way of leading that people can feel in teams, families, and
                 communities.
               </p>
-            </div>
+            </Reveal>
 
             <CategoryCard
               title="Fiction"
@@ -102,7 +124,7 @@ const WhereWordsGo = () => {
         </div>
 
         <div className="lg:hidden mt-8">
-          <p className="text-center text-sm text-neutral-500 mb-8">
+          <p className="text-center section-body mb-8">
             Not everything fits neatly in a box. But these categories give a
             glimpse into the kind of work I love to create.
           </p>
@@ -118,12 +140,16 @@ const WhereWordsGo = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-4 mt-14">
+        <Reveal
+          variant="fade-up"
+          delay={0.4}
+          className="flex flex-wrap justify-center items-center gap-4 mt-14"
+        >
           <Button href="/speakings">Speakings</Button>
           <Button href="/contact" variant="outline" icon={GoArrowRight}>
             Contact Me
           </Button>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

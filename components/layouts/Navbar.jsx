@@ -6,12 +6,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Button from "../ui/Button";
+import { Reveal } from "../ui/Reveal";
 
 const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <header className="w-full border-b border-neutral-200/70 bg-white/80 backdrop-blur">
+    <Reveal
+      as="header"
+      variant="fade-down"
+      duration={0.8}
+      once
+      className="w-full border-b border-neutral-200/70 bg-white/80 backdrop-blur"
+    >
       <div className="container flex items-center justify-between py-1.5">
         <Link href="/" className="flex items-center gap-3 text-neutral-800">
           <Image
@@ -48,7 +55,7 @@ const Navbar = () => {
           Contact Now
         </Button>
       </div>
-    </header>
+    </Reveal>
   );
 };
 

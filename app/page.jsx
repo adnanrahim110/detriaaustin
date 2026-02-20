@@ -1,7 +1,6 @@
 import {
   BioTeaser,
   BookTeaser,
-  CTA,
   ContactSection,
   Hero,
   Newsletter,

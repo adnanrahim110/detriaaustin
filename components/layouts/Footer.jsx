@@ -5,6 +5,7 @@ import { Leaf } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../ui/Button";
+import { Reveal } from "../ui/Reveal";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -20,7 +21,12 @@ const Footer = () => {
   return (
     <footer className="bg-white">
       <div className="container pt-6 pb-5">
-        <div className="relative overflow-hidden rounded-3xl bg-neutral-950 text-white">
+        <Reveal
+          variant="fade-up"
+          duration={0.8}
+          delay={0.1}
+          className="relative overflow-hidden rounded-3xl bg-neutral-950 text-white"
+        >
           <div
             className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,86,159,0.35),transparent_55%)]"
             aria-hidden="true"
@@ -119,7 +125,7 @@ const Footer = () => {
               <p className="text-white/40">Serving is a superpower.</p>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </footer>
   );

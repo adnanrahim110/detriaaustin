@@ -35,7 +35,23 @@
   }
 }
 
-@layer components {}
+@layer components {
+  .section-label {
+    @apply text-sm font-semibold uppercase tracking-[0.2em] text-primary-700;
+  }
+
+  .section-title {
+    @apply text-[clamp(2rem,4vw,3rem)] font-semibold leading-[1.1] tracking-tight text-neutral-900;
+  }
+
+  .section-body {
+    @apply text-base leading-relaxed text-neutral-600 font-medium;
+  }
+
+  .section-padding {
+    @apply py-20 lg:py-28;
+  }
+}
 
 @layer utilities {
   .container {

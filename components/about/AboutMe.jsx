@@ -3,10 +3,11 @@
 import { Award } from "lucide-react";
 import { GoArrowRight } from "react-icons/go";
 import Button from "../ui/Button";
+import { Reveal } from "../ui/Reveal";
 
 const AboutMe = () => {
   return (
-    <section className="relative overflow-hidden bg-[#F3F2EF] py-16 lg:py-24">
+    <section className="relative overflow-hidden bg-[#F3F2EF] section-padding">
       <div
         className="pointer-events-none absolute -left-24 -top-24 h-80 w-80 rounded-full bg-primary-100/70 blur-3xl"
         aria-hidden="true"
@@ -18,13 +19,11 @@ const AboutMe = () => {
 
       <div className="container">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="space-y-8">
-            <span className="inline-flex items-center rounded-full border border-neutral-300 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-700 shadow-sm backdrop-blur">
-              About Me
-            </span>
+          <Reveal variant="fade-right" duration={0.8} className="space-y-8">
+            <div className="section-label">About Me</div>
 
             <div className="space-y-1">
-              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.03em] text-neutral-900 sm:text-[40px]">
+              <h2 className="section-title">
                 Meet the Heart Behind the Message
               </h2>
               <p className="text-base font-semibold text-primary-800 sm:text-lg">
@@ -32,8 +31,8 @@ const AboutMe = () => {
               </p>
             </div>
 
-            <div className="rounded-3xl border border-neutral-200 bg-white/70 p-6 shadow-sm backdrop-blur sm:p-8">
-              <div className="space-y-4 text-sm leading-relaxed text-neutral-700 sm:text-base">
+            <div className="rounded-3xl border border-neutral-200/60 bg-white/70 backdrop-blur-xs p-6 shadow-[0_10px_30px_rgba(0,0,0,0.03)] ring-1 ring-neutral-200/50 sm:p-8">
+              <div className="space-y-4 section-body">
                 <p>
                   Detria Austin Everson is a nationally recognised servant
                   leader and business strategist with 20+ years of experience
@@ -63,10 +62,15 @@ const AboutMe = () => {
                 Speakings
               </Button>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="relative">
-            <div className="relative ml-auto max-w-md overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-2xl">
+          <Reveal
+            variant="fade-left"
+            duration={0.8}
+            delay={0.2}
+            className="relative"
+          >
+            <div className="relative ml-auto max-w-md overflow-hidden rounded-3xl shadow-2xl ring-1 ring-neutral-200/50">
               <img
                 src="/imgs/author.jpeg"
                 alt="Detria Austin Everson"
@@ -80,7 +84,7 @@ const AboutMe = () => {
             </div>
 
             <div className="absolute bottom-1/3 left-4 z-10 lg:-left-4">
-              <div className="relative flex size-36 items-center justify-center rounded-full border border-neutral-200 bg-white/90 shadow-xl backdrop-blur-sm lg:size-44">
+              <div className="relative flex size-36 items-center justify-center rounded-full border border-neutral-200/60 bg-white/90 shadow-xl backdrop-blur-sm lg:size-44">
                 <svg
                   className="absolute inset-0 size-full animate-spin"
                   style={{ animationDuration: "20s" }}
@@ -110,7 +114,7 @@ const AboutMe = () => {
                 <Award className="size-9 text-neutral-700 lg:size-11" />
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

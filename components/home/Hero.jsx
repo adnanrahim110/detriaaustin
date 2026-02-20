@@ -1,142 +1,158 @@
 "use client";
+
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { useRef } from "react";
 import { BsQuote } from "react-icons/bs";
-import { GoArrowDownRight } from "react-icons/go";
-import Button from "../ui/Button";
+import { GoArrowRight } from "react-icons/go";
+import { Reveal } from "../ui/Reveal";
 
 export default function Hero() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  const yText = useTransform(scrollYProgress, [0, 1], [0, 150]);
+  const yBook = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+
   return (
-    <section className="relative w-full overflow-hidden bg-[#F3F2EF]">
-      <div className="container pb-14 pt-10">
-        <div className="flex items-start justify-between gap-6">
-          <div className="max-w-90">
-            <div className="flex items-center gap-3 text-sm">
-              <span className="leading-none">🎙</span>
-              <span className="font-medium">works has appeared in:</span>
-            </div>
+    <section
+      ref={containerRef}
+      className="relative min-h-[calc(100svh-80px)] w-full overflow-hidden bg-[#F3F2EF] flex flex-col justify-center py-20 lg:py-0"
+    >
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-[-20%] left-[-10%] h-[70vh] w-[70vw] rounded-full bg-primary-100/70 blur-[150px]" />
+        <div className="absolute bottom-[-10%] right-[-10%] h-[60vh] w-[60vw] rounded-full bg-primary-50/80 blur-[120px]" />
+      </div>
 
-            <div className="mt-3 flex flex-wrap gap-2">
-              {[
-                "The Rometheme",
-                "Haidez",
-                "Medium Studio Ten",
-                "WildRoot Collective",
-              ].map((t) => (
-                <span
-                  key={t}
-                  className="rounded-xl border border-[#CFCFCF] bg-[#F7F6F3] px-4 py-2 text-sm font-medium text-[#2A2A2A] shadow-[0_1px_0_rgba(0,0,0,0.05)]"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <button
-            aria-label="Open"
-            className="group flex size-20 items-center justify-center rounded-full bg-[#E9E7E1] text-text transition hover:scale-[1.02] active:scale-[0.99]"
+      <div className="container relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-center h-full">
+        <motion.div
+          style={{ y: yText, opacity }}
+          className="col-span-1 lg:col-span-7 flex flex-col items-start lg:pr-10"
+        >
+          <Reveal
+            as="h1"
+            variant="fade-up"
+            duration={1}
+            delay={0.15}
+            className="text-[clamp(3.5rem,6vw,6rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-neutral-900"
           >
-            <GoArrowDownRight
-              size={50}
-              className="transition group-hover:translate-x-px group-hover:translate-y-px"
-            />
-          </button>
-        </div>
+            Service is not soft.
+            <span className="block text-transparent bg-clip-text bg-linear-to-r from-primary-800 to-neutral-500 mt-1">
+              It is strength with humility.
+            </span>
+          </Reveal>
 
-        <div className="relative mt-10 text-center">
-          <h1 className="text-4xl font-semibold tracking-[-0.03em] md:text-[70px] relative z-1">
-            Service is not soft.&nbsp;&nbsp;&nbsp;It is strength with humility
-            <br />
-            quiet power that&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;changes what
-            comes next
-          </h1>
+          <Reveal
+            variant="fade-up"
+            duration={1}
+            delay={0.3}
+            className="max-w-xl text-lg lg:text-xl section-body mt-6"
+          >
+            Quiet power that changes what comes next.
+          </Reveal>
 
-          <div className="pointer-events-none absolute left-[43%] top-[64%] w-55 -translate-x-1/2 -translate-y-1/2 md:top-[56%]">
-            <div className="absolute left-28 -top-16 rotate-10">
-              <div className="relative h-38 w-28">
+          <Reveal
+            variant="fade-up"
+            duration={1}
+            delay={0.45}
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full mt-10"
+          >
+            <Link
+              href="/about"
+              className="bg-primary-900 text-white hover:bg-neutral-900 px-8 py-4 rounded-full text-base font-semibold group flex items-center gap-3 transition-all duration-300 shadow-xl hover:shadow-2xl"
+            >
+              Discover My Work
+              <GoArrowRight
+                className="group-hover:translate-x-1 transition-transform"
+                size={20}
+              />
+            </Link>
+            <Link
+              href="/book"
+              className="px-8 py-4 rounded-full text-base font-semibold text-neutral-800 border border-neutral-300 hover:border-neutral-900 hover:text-neutral-900 transition-all duration-300 flex items-center gap-3 group"
+            >
+              Read The Book
+              <GoArrowRight
+                className="group-hover:translate-x-1 transition-transform"
+                size={20}
+              />
+            </Link>
+          </Reveal>
+        </motion.div>
+
+        <motion.div
+          style={{ y: yBook }}
+          className="col-span-1 lg:col-span-5 relative w-full h-125 lg:h-175 flex items-center justify-center mt-8 lg:mt-0"
+        >
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-white/40 blur-[100px] rounded-full pointer-events-none" />
+
+          <Reveal
+            variant="scale"
+            duration={1.2}
+            delay={0.5}
+            className="relative w-full max-w-[320px] lg:max-w-105 h-full z-10"
+          >
+            <motion.div
+              animate={{ y: [-15, 15, -15], rotateZ: [-1, 1, -1] }}
+              transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
+              className="w-full h-full relative flex items-center justify-center"
+            >
+              <div className="absolute right-4 lg:right-10 top-16 lg:top-24 w-50 h-75 lg:w-65 lg:h-97.5 rotate-12 opacity-80 z-0">
                 <Image
                   src="/imgs/book-back.png"
-                  alt=""
+                  alt="Serving is a Superpower - Back Cover"
                   fill
-                  className="object-contain z-0"
+                  className="object-contain drop-shadow-xl"
                   priority
                 />
               </div>
-            </div>
 
-            <div className="absolute left-4.5 -top-4 -rotate-10">
-              <div className="relative h-38 w-28">
+              <div className="absolute left-0 bottom-16 lg:bottom-24 w-60 h-90 lg:w-[320px] lg:h-115 -rotate-6 z-10">
                 <Image
                   src="/imgs/book.png"
-                  alt=""
+                  alt="Serving is a Superpower - Front Cover"
                   fill
-                  className="object-contain"
+                  className="object-contain drop-shadow-2xl"
                   priority
                 />
               </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </Reveal>
 
-        <div className="mt-28 grid gap-6 md:grid-cols-12 items-end">
-          <div className="md:col-span-5">
-            <div className="relative rounded-xl bg-stone-200 px-8 py-7">
-              <div className="text-[33px] font-semibold leading-[1.1] text-neutral-900">
-                A book for people who want their leadership to feel like care,
-                not performance.
+          <Reveal
+            variant="fade-left"
+            duration={1}
+            delay={0.9}
+            className="absolute -right-2 lg:-right-12 bottom-0 lg:bottom-12 w-64 lg:w-72 rounded-2xl bg-white/70 border border-neutral-200 backdrop-blur-xl p-6 shadow-xl z-20"
+          >
+            <BsQuote className="text-primary-700 text-4xl mb-3 opacity-50" />
+            <p className="text-neutral-700 text-sm italic font-medium leading-relaxed">
+              "A book for people who want their leadership to feel like care,
+              not performance."
+            </p>
+            <div className="mt-4 flex items-center gap-3 border-t border-neutral-200 pt-4">
+              <div className="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center text-xs font-bold text-primary-800 border border-primary-200">
+                ED
               </div>
-              <div className="mt-4 text-2xl font-medium text-neutral-700">
-                – E.L. Doctorow
-              </div>
-              <div className="absolute bottom-6 right-7 text-5xl font-black text-neutral-500">
-                <BsQuote className="rotate-180" />
-              </div>
-            </div>
-          </div>
-
-          <div className="md:col-span-4">
-            <div className="rounded-xl bg-primary p-7">
-              <div className="flex flex-wrap gap-3">
-                {[
-                  "#storytelling",
-                  "#fiction",
-                  "#copywriting",
-                  "#essays",
-                  "#voice",
-                ].map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-xl bg-white px-4 py-2 text-[15px] font-semibold text-[#2A2A2A] shadow-[0_2px_0_rgba(0,0,0,0.05)]"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="md:col-span-3">
-            <div className="flex h-full flex-col justify-between rounded-xl bg-[#F3F2EF]">
-              <p className=" text-[15px] leading-[1.55] text-[#6A6A6A] mb-4">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Repellat modi adipisci quisquam mollitia, voluptatum tempora
-              </p>
-
               <div>
-                <Button href="/about">Discover My Work</Button>
+                <p className="text-neutral-900 text-xs font-semibold">
+                  E.L. Doctorow
+                </p>
+                <p className="text-neutral-500 text-[10px] font-medium">
+                  Author & Critic
+                </p>
               </div>
             </div>
-          </div>
-        </div>
-
-        <style jsx>{`
-          @media (max-width: 768px) {
-            h1 {
-              letter-spacing: -0.02em;
-            }
-          }
-        `}</style>
+          </Reveal>
+        </motion.div>
       </div>
+
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-linear-to-b from-transparent to-[#F3F2EF] pointer-events-none" />
     </section>
   );
 }

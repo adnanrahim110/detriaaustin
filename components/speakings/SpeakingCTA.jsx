@@ -1,10 +1,16 @@
 import Button from "../ui/Button";
+import { Reveal } from "../ui/Reveal";
 
 const SpeakingCTA = () => {
   return (
-    <section className="bg-white">
-      <div className="container pb-16 lg:pb-24">
-        <div className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-neutral-950 px-6 py-12 text-white sm:px-10 lg:px-14 lg:py-14">
+    <section className="bg-white section-padding">
+      <div className="container">
+        <Reveal
+          variant="fade-up"
+          duration={0.8}
+          delay={0.2}
+          className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-neutral-950 px-6 py-12 text-white sm:px-10 lg:px-14 lg:py-14"
+        >
           <div
             className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,86,159,0.35),transparent_55%)]"
             aria-hidden="true"
@@ -22,8 +28,8 @@ const SpeakingCTA = () => {
                 at your next event.
               </h2>
               <p className="max-w-xl text-sm leading-relaxed text-white/75 sm:text-base">
-                Share your date, location, and audience goals. You’ll receive
-                availability, format recommendations, and next steps.
+                Share your date, location, and audience goals. You&apos;ll
+                receive availability, format recommendations, and next steps.
               </p>
             </div>
 
@@ -40,7 +46,7 @@ const SpeakingCTA = () => {
               </p>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
