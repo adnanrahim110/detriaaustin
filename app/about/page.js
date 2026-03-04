@@ -20,7 +20,7 @@ const AboutPage = () => {
         }
         description="Detria Austin learned how to serve by watching her mother feed strangers and open their home to families in need."
         breadcrumbLabel="About"
-        imageSrc="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=80"
+        imageSrc="/imgs/author-h.png"
         imageAlt="Open book with autumn leaves"
       />
       <AboutMe />

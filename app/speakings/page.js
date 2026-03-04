@@ -22,7 +22,7 @@ const SpeakingsPage = () => {
         }
         description="Detria Austin Everson brings the message of Serving Is a Superpower to organizations, schools, and communities through motivational keynotes and practical workshops that help people lead with integrity, serve consistently, and create lasting impact."
         breadcrumbLabel="Speakings"
-        imageSrc="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1600&q=80"
+        imageSrc="/imgs/speaking-h.png"
         imageAlt="Speaker addressing an audience"
       />
       <SpeakingTopics />

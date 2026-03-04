@@ -3,7 +3,6 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ChevronDown, Minus } from "lucide-react";
 import { useState } from "react";
-import Button from "../ui/Button";
 import { Reveal } from "../ui/Reveal";
 
 const speakingTopics = [
@@ -11,40 +10,35 @@ const speakingTopics = [
     title: "Serving Is a Superpower",
     description:
       "Stories and lessons on how service becomes real strength—steady, practical, and lasting.",
-    image:
-      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80",
+    image: "/imgs/book.png",
     alt: "Speaker addressing an audience",
   },
   {
     title: "Lead With Clarity",
     description:
       "Simple frameworks for making better decisions, building trust, and keeping teams aligned.",
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
+    image: "/imgs/s2.png",
     alt: "Team collaborating around a table",
   },
   {
     title: "Service That Builds Community",
     description:
       "How consistent action, shared responsibility, and partnerships create change that holds.",
-    image:
-      "https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=800&q=80",
+    image: "/imgs/s3.png",
     alt: "People working together in a community setting",
   },
   {
     title: "Stability, Opportunity, and Voice",
     description:
       "A grounded focus on housing and financial literacy as pathways to dignity and upward movement.",
-    image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80",
+    image: "/imgs/s4.png",
     alt: "Hands exchanging house keys",
   },
   {
     title: "Raising the Next Leaders",
     description:
       "Support and tools for emerging leaders to grow confidence, serve well, and lead with integrity.",
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+    image: "/imgs/s5.png",
     alt: "Mentor speaking with a young professional",
   },
 ];
@@ -161,7 +155,7 @@ const Speakings = () => {
 
           <div className="hidden lg:block lg:sticky lg:top-28">
             <Reveal variant="fade-left" duration={0.8} delay={0.3}>
-              <div className="relative aspect-4/5 w-full overflow-hidden rounded-3xl shadow-[0_30px_60px_rgba(0,0,0,0.12)] ring-1 ring-neutral-200/50">
+              <div className="relative aspect-4/5 w-full">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={activeTopic.image}
@@ -175,26 +169,9 @@ const Speakings = () => {
                       duration: prefersReducedMotion ? 0 : 0.4,
                       ease: [0.25, 0.1, 0.25, 1],
                     }}
-                    className="absolute inset-0 h-full w-full object-cover"
+                    className="absolute inset-0 w-full h-auto"
                   />
                 </AnimatePresence>
-
-                <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/60 to-transparent p-6">
-                  <AnimatePresence mode="wait">
-                    <motion.p
-                      key={activeTopic.title}
-                      initial={{ opacity: 0, y: 8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -8 }}
-                      transition={{
-                        duration: prefersReducedMotion ? 0 : 0.3,
-                      }}
-                      className="text-white text-sm font-semibold"
-                    >
-                      {activeTopic.title}
-                    </motion.p>
-                  </AnimatePresence>
-                </div>
               </div>
             </Reveal>
           </div>

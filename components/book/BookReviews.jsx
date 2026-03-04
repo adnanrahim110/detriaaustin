@@ -24,7 +24,7 @@ const BookReviews = () => {
             className="overflow-hidden rounded-3xl shadow-2xl ring-1 ring-neutral-200/50"
           >
             <img
-              src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=900&q=80"
+              src="/imgs/rev2.png"
               alt="Speaker smiling in front of books"
               className="h-full w-full object-cover"
               loading="lazy"

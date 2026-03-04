@@ -8,7 +8,7 @@ const BookHero = ({
   ),
   description = "Serving is a SuperPower, will change how you see yourself, your neighbors, and the power you already carry.",
   breadcrumbLabel = "Book Detail",
-  imageSrc = "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1600&q=80",
+  imageSrc = "/imgs/book-h.png",
   imageAlt = "Stacks of books",
 }) => {
   return (
@@ -45,16 +45,16 @@ const BookHero = ({
           variant="scale"
           duration={0.8}
           delay={0.4}
-          className="mt-10 overflow-hidden rounded-3xl shadow-2xl ring-1 ring-neutral-200/50 relative"
+          className="mt-10 overflow-hidden rounded-3xl relative"
         >
           <div
-            className="absolute -left-20 -top-10 h-60 w-60 rounded-full bg-primary-100/60 blur-3xl pointer-events-none"
+            className="absolute -left-20 -top-10 h-60 w-60 pointer-events-none"
             aria-hidden="true"
           />
           <img
             src={imageSrc}
             alt={imageAlt}
-            className="h-72 w-full object-cover sm:h-96 lg:h-105 relative z-10"
+            className="h-68 w-full object-cover sm:h-96 lg:h-105 relative z-10"
             loading="lazy"
           />
         </Reveal>

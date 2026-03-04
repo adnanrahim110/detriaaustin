@@ -42,7 +42,7 @@ export default function Hero() {
             className="text-[clamp(3.5rem,6vw,6rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-neutral-900"
           >
             Service is not soft.
-            <span className="block text-transparent bg-clip-text bg-linear-to-r from-primary-800 to-neutral-500 mt-1">
+            <span className="block text-transparent bg-clip-text bg-linear-to-r from-primary-800 to-neutral-500 mt-1 leading-tight">
               It is strength with humility.
             </span>
           </Reveal>

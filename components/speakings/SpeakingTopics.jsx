@@ -7,32 +7,28 @@ const speakingTopics = [
     title: "Serving Is a Superpower: Leadership People Can Feel",
     description:
       "A motivating talk on why service is strength, not softness\u2014and how consistent, people-first leadership builds trust, loyalty, and results.",
-    image:
-      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=640&q=80",
+    image: "/imgs/s2.png",
     alt: "Speaker addressing an audience",
   },
   {
     title: "Lead With Purpose: Turning Values Into Daily Actions",
     description:
       "A practical and uplifting session that helps audiences align their choices with what matters most, even under pressure and competing demands.",
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=640&q=80",
+    image: "/imgs/s3.png",
     alt: "Team collaborating around a table",
   },
   {
     title: "The Quiet Power of Follow-Through",
     description:
       "A motivating message about credibility\u2014how small commitments, kept consistently, change culture, relationships, and outcomes.",
-    image:
-      "https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=640&q=80",
+    image: "/imgs/s4.png",
     alt: "People working together in a community setting",
   },
   {
     title: "Service That Scales: From Individual Effort to Collective Impact",
     description:
       "A talk designed for organizations and communities ready to move from \u201Cgood intentions\u201D to coordinated action that lasts.",
-    image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=640&q=80",
+    image: "/imgs/s5.png",
     alt: "Hands exchanging house keys",
   },
 ];

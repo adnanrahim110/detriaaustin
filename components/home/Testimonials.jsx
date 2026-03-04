@@ -90,7 +90,7 @@ const Testimonials = () => {
             <div className="ml-auto w-full max-w-sm rounded-4xl bg-white/40 border border-neutral-200/50 backdrop-blur-md shadow-2xl p-2">
               <div className="relative overflow-hidden rounded-3xl shadow-sm">
                 <img
-                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80"
+                  src="/imgs/rev.png"
                   alt="Author portrait"
                   className="h-72 w-full object-cover"
                   loading="lazy"

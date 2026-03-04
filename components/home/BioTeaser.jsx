@@ -1,7 +1,7 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Button from "../ui/Button";
 import { Reveal } from "../ui/Reveal";
 
 const BioTeaser = () => {
@@ -10,7 +10,7 @@ const BioTeaser = () => {
       <div className="absolute -left-[10%] top-0 h-100 w-125 rounded-full bg-primary-50/60 blur-[100px] pointer-events-none" />
 
       <div className="container relative z-10">
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_1.5fr_0.7fr] lg:items-start">
+        <div className="grid gap-20 lg:grid-cols-[35%_auto] lg:items-start">
           <Reveal
             variant="fade-right"
             duration={0.8}
@@ -37,7 +37,7 @@ const BioTeaser = () => {
                 Detria Austin
               </span>
             </h2>
-            <p className="max-w-xl section-body">
+            <p className="section-body">
               Detria Austin Everson is a nationally recognised servant leader
               and business strategist whose work sits at the intersection of
               leadership, organizational excellence, and social impact. With 20+
@@ -46,29 +46,20 @@ const BioTeaser = () => {
               stewarding resources with integrity, and helping mission-driven
               work produce lasting results.
             </p>
-          </Reveal>
-
-          <Reveal
-            variant="fade-left"
-            duration={0.8}
-            delay={0.4}
-            className="flex flex-col items-start gap-6 lg:pt-10"
-          >
-            <div className="overflow-hidden rounded-2xl bg-white shadow-[0_10px_30px_rgba(0,0,0,0.05)] ring-1 ring-neutral-200/50">
-              <img
-                src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?auto=format&fit=crop&w=500&q=80"
-                alt="Books on a table"
-                className="h-40 w-48 object-cover"
-                loading="lazy"
-              />
+            <p className="section-body">
+              Throughout her career, Detria has been trusted with complex
+              leadership roles requiring strategic vision, financial acumen, and
+              operational discipline. Her expertise includes strategic
+              forecasting, managing multi-million-dollar budgets, cultivating
+              high-value corporate and philanthropic partnerships, overseeing
+              large-scale, multi-city initiatives, and guiding organizations
+              through growth and transition. Her leadership style is rooted in
+              service, prioritizing people, purpose, and performance in equal
+              measure.
+            </p>
+            <div className="flex items-start">
+              <Button href="/about">Know More</Button>
             </div>
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white px-5 py-2.5 text-sm font-semibold text-neutral-700 shadow-sm transition-all hover:border-primary-600 hover:text-primary-700 hover:shadow-md"
-            >
-              Know More
-              <ArrowRight className="h-4 w-4" />
-            </Link>
           </Reveal>
         </div>
       </div>
