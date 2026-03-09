@@ -6,7 +6,7 @@ const speakingTopics = [
   {
     title: "Serving Is a Superpower: Leadership People Can Feel",
     description:
-      "A motivating talk on why service is strength, not softness\u2014and how consistent, people-first leadership builds trust, loyalty, and results.",
+      "A motivating talk on why service is strength, not softness and how consistent, people-first leadership builds trust, loyalty, and results.",
     image: "/imgs/s2.png",
     alt: "Speaker addressing an audience",
   },
@@ -20,7 +20,7 @@ const speakingTopics = [
   {
     title: "The Quiet Power of Follow-Through",
     description:
-      "A motivating message about credibility\u2014how small commitments, kept consistently, change culture, relationships, and outcomes.",
+      "A motivating message about credibility how small commitments, kept consistently, change culture, relationships, and outcomes.",
     image: "/imgs/s4.png",
     alt: "People working together in a community setting",
   },

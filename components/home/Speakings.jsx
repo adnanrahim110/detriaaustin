@@ -9,7 +9,7 @@ const speakingTopics = [
   {
     title: "Serving Is a Superpower",
     description:
-      "Stories and lessons on how service becomes real strength—steady, practical, and lasting.",
+      "Stories and lessons on how service becomes real strength steady, practical, and lasting.",
     image: "/imgs/book.png",
     alt: "Speaker addressing an audience",
   },

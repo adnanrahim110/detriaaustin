@@ -9,7 +9,7 @@ const highlights = [
     num: "01",
     title: "Short, Practical Chapters",
     description:
-      "Clear reflections and real examples that fit into a busy life—written to be applied immediately, not saved for later.",
+      "Clear reflections and real examples that fit into a busy life written to be applied immediately, not saved for later.",
   },
   {
     num: "02",
@@ -21,7 +21,7 @@ const highlights = [
     num: "03",
     title: "Stories That Stay With You",
     description:
-      "\u201CService Witnessed\u201D moments that highlight what service looks like in real life—and why small actions carry long-term weight.",
+      "\u201CService Witnessed\u201D moments that highlight what service looks like in real life and why small actions carry long-term weight.",
   },
 ];
 
@@ -74,8 +74,8 @@ const BookTeaser = () => {
               </span>
             </h2>
             <p className="max-w-xl section-body">
-              Serving Is a Superpower shows how service becomes real
-              strength—steady, practical, and rooted in purpose. Built on lived
+              Serving Is a Superpower shows how service becomes real strength
+              steady, practical, and rooted in purpose. Built on lived
               experience and clear lessons, it turns good intentions into action
               that people actually feel.
             </p>

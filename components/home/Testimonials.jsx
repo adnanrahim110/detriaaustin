@@ -51,7 +51,7 @@ const Testimonials = () => {
                       </p>
                       <div className="flex items-center gap-4">
                         <img
-                          src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=120&q=80"
+                          src={review.avatar}
                           alt={review.name}
                           className="h-12 w-12 rounded-full object-cover ring-2 ring-primary-100"
                           loading="lazy"
