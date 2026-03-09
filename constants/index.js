@@ -55,7 +55,7 @@ export const reviews = [
   },
   {
     text: "What I liked most is that it doesn’t act like service is some big, dramatic thing. It’s the everyday stuff being consistent, keeping your word, making space for people. The stories feel honest, and the lessons don’t feel forced. I finished it feeling challenged, but in a good way like I could actually do something with what I read.",
-    name: "Marcus Holloway",
+    name: "Emily Hope",
     avatar:
       "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=120&q=80",
   },
